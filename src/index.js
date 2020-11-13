@@ -16,7 +16,7 @@ import rootSaga from './redux/sagas/_root.saga';
 import reducers from './redux/reducers/reducer_root';
 
 // Create the rootSaga generator function
-function* rootSaga() {}
+// function* rootSaga() {}
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
