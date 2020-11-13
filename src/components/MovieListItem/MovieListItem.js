@@ -6,12 +6,12 @@ import { withRouter } from 'react-router-dom';
 class MovieListItem extends Component {
   render() {
     return (
-      <div>
-        <h1>Where are the movies?!</h1>
+      <div className="movieContainer">
+        <h3>Where are the movies?!</h3>
         {/* // br */}
-        <h1>I bet Kyle lost them!!</h1>
+        <h3>I bet Josh lost them!!</h3>
         {/* // br */}
-        <h1>Damnit Kyle!!!</h1>
+        <h3>Damnit Josh!!!</h3>
       </div>
     );
   }

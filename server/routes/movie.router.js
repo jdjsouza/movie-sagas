@@ -49,7 +49,7 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
   // Add query to get all movies
-  const queryText = 'SELECT id, title, poster, description FROM movie';
+  const queryText = 'SELECT id, title, poster, description FROM movies';
   pool
     .query(queryText)
     .then((result) => {
