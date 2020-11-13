@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 
 class HomePage extends Component {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        {/* Need to display all movies with the movie poster */}
+        {/* The movie poster is the button to load the details page */}
+      </div>
+    );
   }
 }
 
