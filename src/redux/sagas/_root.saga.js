@@ -10,8 +10,8 @@ import getMoviesSaga from './getMovies.saga';
 function* rootSaga() {
   yield all([
     // get sagas
-    getMoviesSaga,
-    getGenresSaga,
+    getMoviesSaga(),
+    getGenresSaga(),
   ]);
 }
 

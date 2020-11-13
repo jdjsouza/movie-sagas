@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import MovieList from '../../MovieList/MovieList';
 
 class HomePage extends Component {
   render() {
@@ -7,9 +8,14 @@ class HomePage extends Component {
       <div>
         {/* Need to display all movies with the movie poster */}
         {/* The movie poster is the button to load the details page */}
+        <MovieList />
       </div>
     );
   }
 }
 
-export default HomePage;
+const mapStateToProps = (store) => ({
+  store,
+});
+
+export default connect(mapStateToProps)(HomePage);

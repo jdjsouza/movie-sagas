@@ -6,7 +6,7 @@ function* getMovies(action) {
     const response = yield axios.get('/api/movie');
     console.log(response.data);
     yield put({
-      type: 'ADD_MOVIE',
+      type: 'SET_MOVIE',
       payload: response.data,
     });
   } catch (err) {
