@@ -1,0 +1,22 @@
+.movieContainer {
+  display: inline-flex;
+  width: 90%;
+}
+
+.moviePoster {
+  margin-right: 10px;
+  float: left;
+  width: 185px;
+  height: 275px;
+}
+
+.poster {
+  width: 185px;
+  height: 275px;
+}
+
+.movieInfo {
+  float: right;
+  margin-left: 25px;
+  text-align: left;
+}
