@@ -6,6 +6,7 @@ class HomePage extends Component {
   render() {
     return (
       <div>
+        <br></br>
         {/* Need to display all movies with the movie poster */}
         {/* The movie poster is the button to load the details page */}
         <MovieList />

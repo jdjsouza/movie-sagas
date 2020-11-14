@@ -7,11 +7,17 @@ class MovieListItem extends Component {
   render() {
     return (
       <div className="movieContainer">
-        <h3>Where are the movies?!</h3>
+        {/* go away */}
+        <div>
+          <img src={this.props.movie.poster} alt={this.props.movie.title} />
+        </div>
+        <div>
+          <h3>{this.props.movie.title}</h3>
+        </div>
+        <div>
+          <p>{this.props.movie.description}</p>
+        </div>
         {/* // br */}
-        <h3>I bet Josh lost them!!</h3>
-        {/* // br */}
-        <h3>Damnit Josh!!!</h3>
       </div>
     );
   }

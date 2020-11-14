@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import Header from '../Header/Header';
 import HomePage from '../pages/HomePage/HomePage';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.dispatch({
+      type: 'GET_MOVIES',
+    });
+  }
   // Renders the entire app on the DOM
   render() {
     return (
@@ -19,4 +25,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect()(App);
