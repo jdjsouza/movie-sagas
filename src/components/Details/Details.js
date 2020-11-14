@@ -21,16 +21,16 @@ class Details extends Component {
           />
         </div>
         <div>
+          <h2>{this.props.store.movieDetails.title}</h2>
           <p>
             Genres:{' '}
             {this.props.store.movieDetails.genres.map((item, index) => (
               <span key={index}>{item}, </span>
             ))}
           </p>
-        </div>
-        <div>
-          <h2>{this.props.store.movieDetails.title}</h2>
-          <p>{this.props.store.movieDetails.description}</p>
+          <p className="descriptionParagraph">
+            {this.props.store.movieDetails.description}
+          </p>
         </div>
         {/* // br */}
       </div>
