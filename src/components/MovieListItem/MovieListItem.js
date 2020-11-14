@@ -6,10 +6,14 @@ import { withRouter } from 'react-router-dom';
 import './MovieListItem.css';
 
 class MovieListItem extends Component {
+  goToDetails = (event) => {
+    this.props.history.push(`/details/${this.props.movie.id}`);
+  };
+
   render() {
     return (
-      <div className="movieContainer">
-        {/* go away */}
+      <div onClick={this.goToDetails} className="movieContainer">
+        {/* overall container for each item */}
         <div className="moviePoster">
           <img
             className="poster"
@@ -18,7 +22,7 @@ class MovieListItem extends Component {
           />
         </div>
         <div className="movieInfo">
-          <h3>{this.props.movie.title}</h3>
+          <h2>{this.props.movie.title}</h2>
           <p>{this.props.movie.description}</p>
         </div>
         {/* // br */}
@@ -31,4 +35,4 @@ const mapStateToProps = (store) => ({
   store,
 });
 
-export default connect(mapStateToProps)(MovieListItem);
+export default withRouter(connect(mapStateToProps)(MovieListItem));

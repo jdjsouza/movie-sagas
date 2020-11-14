@@ -47,6 +47,7 @@ VALUES
 -- starter genres
 INSERT INTO "genres" ("name")
 VALUES 
+('Action'),
 ('Adventure'),
 ('Animated'),
 ('Biographical'),
@@ -64,11 +65,13 @@ VALUES
 -- Movie Genres
 INSERT INTO "movies_genres" ("movie_id", "genre_id")
 VALUES (1, 1),
+(1, 2),
 (1, 9),
-(1, 11),
-(2, 8),
+(1, 12),
 (2, 9),
 (2, 10),
+(2, 11),
 (3, 1),
-(3, 11);
+(3, 2),
+(3, 12);
 

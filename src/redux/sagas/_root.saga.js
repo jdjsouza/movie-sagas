@@ -1,5 +1,6 @@
 import { all } from 'redux-saga/effects';
 import getGenresSaga from './getGenres.saga';
+import getMovieDetailsSaga from './getMovieDetails.saga';
 import getMoviesSaga from './getMovies.saga';
 
 // SAGAS
@@ -12,6 +13,7 @@ function* rootSaga() {
     // get sagas
     getMoviesSaga(),
     getGenresSaga(),
+    getMovieDetailsSaga(),
   ]);
 }
 

@@ -1,6 +1,7 @@
 import { put, takeLatest } from 'redux-saga/effects';
 import axios from 'axios';
 
+// START GET movies for HomePage
 function* getMovies(action) {
   try {
     const response = yield axios.get('/api/movie');
@@ -19,3 +20,4 @@ function* getMoviesSaga() {
 }
 
 export default getMoviesSaga;
+// END GET movies for HomePage

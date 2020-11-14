@@ -9,6 +9,7 @@ class HomePage extends Component {
         <br></br>
         {/* Need to display all movies with the movie poster */}
         {/* The movie poster is the button to load the details page */}
+        {/* May make the entire div a button to load the details page */}
         <MovieList />
       </div>
     );

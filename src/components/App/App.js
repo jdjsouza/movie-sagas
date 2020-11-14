@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import Header from '../Header/Header';
+import DetailsPage from '../pages/DetailsPage/DetailsPage';
 import HomePage from '../pages/HomePage/HomePage';
 import './App.css';
 
@@ -19,6 +20,7 @@ class App extends Component {
         <Router>
           {/* ADD PAGES! */}
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/details/:id" component={DetailsPage} />
         </Router>
       </div>
     );

@@ -47,8 +47,8 @@ router.post('/', (req, res) => {
     });
 });
 
+// Add query to get all movies
 router.get('/', (req, res) => {
-  // Add query to get all movies
   const queryText = 'SELECT id, title, poster, description FROM movies';
   pool
     .query(queryText)
@@ -57,6 +57,25 @@ router.get('/', (req, res) => {
     })
     .catch((err) => {
       console.log('Error completing SELECT movie query', err);
+      res.sendStatus(500);
+    });
+});
+
+// Query to get details for specific movie
+router.get('/details/:id', (req, res) => {
+  const queryText = `SELECT "movies".id, "movies".title, "movies".poster, 
+  "movies".description, array_agg(genres.name) as "genres" FROM "movies"
+  LEFT JOIN "movies_genres" ON "movies".id = "movies_genres".movie_id 
+  LEFT JOIN "genres" ON "movies_genres".genre_id = "genres".id
+  WHERE "movies".id = $1
+  GROUP BY "movies".id;`;
+  pool
+    .query(queryText, [req.params.id])
+    .then((result) => {
+      res.send(result.rows[0]);
+    })
+    .catch((err) => {
+      console.log('Error in get details in movie router', err);
       res.sendStatus(500);
     });
 });
