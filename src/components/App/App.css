@@ -34,3 +34,20 @@
 .backButton {
   margin-top: 30px;
 }
+
+.addButton {
+  margin-bottom: 22px;
+}
+
+.descText {
+  margin-top: 15px;
+}
+
+.inputTitle {
+  margin-right: 15px;
+}
+
+.cancelButton {
+  margin-top: 15px;
+  margin-right: 15px;
+}
