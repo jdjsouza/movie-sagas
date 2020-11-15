@@ -11,13 +11,6 @@ class AddMoviePage extends Component {
     },
   };
 
-  // componentDidMount() {
-  //   // get the details for this movie ID
-  //   this.props.dispatch({
-  //     type: 'GET_GENRES',
-  //   });
-  // }
-
   handleChangeFor = (propertyName) => (event) => {
     this.setState({
       newMovie: {

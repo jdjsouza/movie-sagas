@@ -26,7 +26,7 @@ class Details extends Component {
           <p>
             Genres:{' '}
             {this.props.store.movieDetails.genres.map((item, index) => (
-              <span key={index}>{item}, </span>
+              <span key={index}>{item} | </span>
             ))}
           </p>
           <p className="descriptionParagraph">
