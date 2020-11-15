@@ -12,7 +12,11 @@ class App extends Component {
     this.props.dispatch({
       type: 'GET_MOVIES',
     });
+    this.props.dispatch({
+      type: 'GET_GENRES',
+    });
   }
+
   // Renders the entire app on the DOM
   render() {
     return (

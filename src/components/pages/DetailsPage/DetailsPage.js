@@ -10,8 +10,8 @@ class DetailsPage extends Component {
     return (
       <div>
         {/* Shows all the details for a specific movie including what genre's it's been given */}
-        {/* Back to list button */}
         <h1>Movie Details</h1>
+        {/* I wanted to componentize the details page to see how that would flow */}
         <Details />
         <button className="backButton" onClick={this.clickBack}>
           Back To The List!

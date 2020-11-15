@@ -11,6 +11,7 @@ class Details extends Component {
       payload: this.props.match.params.id,
     });
   }
+
   render() {
     return (
       <div>

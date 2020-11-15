@@ -7,11 +7,18 @@ class AddMoviePage extends Component {
       title: '',
       poster: '',
       description: '',
+      genres: '',
     },
   };
 
+  // componentDidMount() {
+  //   // get the details for this movie ID
+  //   this.props.dispatch({
+  //     type: 'GET_GENRES',
+  //   });
+  // }
+
   handleChangeFor = (propertyName) => (event) => {
-    console.log('event happened');
     this.setState({
       newMovie: {
         ...this.state.newMovie,
@@ -29,6 +36,10 @@ class AddMoviePage extends Component {
   };
 
   render() {
+    const theGenres = this.props.store.genres.map(function (item) {
+      return <option key={item.id}>{item.name}</option>;
+    });
+    console.log(this.props.store);
     return (
       <div>
         <h2>Let's add a Movie!</h2>
@@ -51,6 +62,12 @@ class AddMoviePage extends Component {
             value={this.state.newMovie.poster}
             onChange={this.handleChangeFor('poster')}
           ></input>
+          {/* A dropdown box for genres */}
+          <label> Select a Genre: </label>
+          <select name="genres">
+            <option value="0">Genre</option>
+            {theGenres}
+          </select>
           {/* A text area for the movie description */}
           <textarea
             className="descText"
@@ -61,7 +78,6 @@ class AddMoviePage extends Component {
             value={this.state.newMovie.poster}
             onChange={this.handleChangeFor('poster')}
           ></textarea>
-          {/* A dropdown box for genres */}
           {/* Save and Cancel buttons */}
         </div>
         <button className="cancelButton" onClick={this.cancelClick}>

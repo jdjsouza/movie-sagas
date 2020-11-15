@@ -4,14 +4,14 @@ const pool = require('../modules/pool');
 
 router.get('/', (req, res) => {
   // Add query to get all genres
-  const queryText = 'SELECT * from genres';
+  const queryText = 'SELECT * FROM "genres" ORDER BY "id";';
   pool
     .query(queryText)
-    .then((results) => {
+    .then((result) => {
       res.send(result.rows);
     })
     .catch((err) => {
-      console.log('Error in GET for genres');
+      console.log('Error while in GET genres', err);
       res.sendStatus(500);
     });
 });

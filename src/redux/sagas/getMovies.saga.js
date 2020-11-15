@@ -1,6 +1,5 @@
 import { put, takeLatest } from 'redux-saga/effects';
 import axios from 'axios';
-
 // START GET movies for HomePage
 function* getMovies(action) {
   try {

@@ -3,15 +3,10 @@ import { connect } from 'react-redux';
 import MovieListItem from '../MovieListItem/MovieListItem';
 
 class MovieList extends Component {
-  //   componentDidMount() {
-  //     console.log(this.props.store);
-  //     this.props.dispatch({
-  //       type: 'GET_MOVIES',
-  //     });
-  //   }
   render() {
     return (
       <div>
+        {/* all the components!!! */}
         {this.props.store.movies.map((item, index) => (
           <MovieListItem key={index} movie={item} />
         ))}

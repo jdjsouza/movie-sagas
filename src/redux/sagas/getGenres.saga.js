@@ -6,7 +6,7 @@ function* getGenres(action) {
     const response = yield axios.get('/api/genre');
     console.log(response.data);
     yield put({
-      type: 'ADD_GENRE',
+      type: 'SET_GENRES',
       payload: response.data,
     });
   } catch (err) {
@@ -15,7 +15,7 @@ function* getGenres(action) {
 }
 
 function* getGenresSaga() {
-  yield takeLatest('GET_GENRE', getGenres);
+  yield takeLatest('GET_GENRES', getGenres);
 }
 
 export default getGenresSaga;

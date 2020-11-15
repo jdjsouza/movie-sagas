@@ -12,9 +12,9 @@ class MovieListItem extends Component {
 
   render() {
     return (
-      <div onClick={this.goToDetails} className="movieContainer">
+      <div className="movieContainer">
         {/* overall container for each item */}
-        <div className="moviePoster">
+        <div onClick={this.goToDetails} className="moviePoster">
           <img
             className="poster"
             src={this.props.movie.poster}
